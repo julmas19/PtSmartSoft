@@ -1,0 +1,173 @@
+{
+	"info": {
+		"_postman_id": "4fc3b3f4-3b29-4925-87f3-46745d8030ba",
+		"name": "PruebaSmartsoft",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "23088821"
+	},
+	"item": [
+		{
+			"name": "Productos",
+			"item": [
+				{
+					"name": "ListarProductos",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "RegistroProducto",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"nombre\": \"Producto 3\",\r\n        \"precio\": 5000,\r\n        \"stock\": 50\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/producto/registro"
+					},
+					"response": []
+				},
+				{
+					"name": "ConsultarProducto",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8080/producto/buscar/1"
+					},
+					"response": []
+				},
+				{
+					"name": "EliminarProducto",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": "http://localhost:8080/producto/eliminar/1"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Clientes",
+			"item": [
+				{
+					"name": "ListarClientes",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "[\r\n    {\r\n        \"producto\": { \"id_producto\": 1 },\r\n        \"cantidad\": 2\r\n    },\r\n    {\r\n        \"producto\": { \"id_producto\": 2 },\r\n        \"cantidad\": 3\r\n    }\r\n]\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/clientes/listar"
+					},
+					"response": []
+				},
+				{
+					"name": "RegistroClientes",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "\r\n    {\r\n        \"id_cliente\": 1234563,\r\n        \"nombre\": \"Carlos\",\r\n        \"apellido\": \"Estrada\",\r\n        \"direccion\": \"Calle 1\",\r\n        \"fecha_nacimiento\": \"1999-10-06\",\r\n        \"telefono\": 300497577,\r\n        \"email\": \"julmas@gmail.com\"\r\n    }\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/clientes/registro"
+					},
+					"response": []
+				},
+				{
+					"name": "EliminarCliente",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/cliente/eliminar/1026599037"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Facturas",
+			"item": [
+				{
+					"name": "ListarFacturas",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "RegistroFacturas",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"nombre\": \"Producto 3\",\r\n        \"precio\": 5000,\r\n        \"stock\": 50\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/producto/registro"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Detalles",
+			"item": [
+				{
+					"name": "ListarDetalles",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "RegistroDetalles",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
