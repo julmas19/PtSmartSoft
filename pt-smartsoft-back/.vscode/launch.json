@@ -1,0 +1,14 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot-PtSmartsoftBackApplication<pt-smartsoft-back>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.julmas.pt_smartsoft_back.PtSmartsoftBackApplication",
+            "projectName": "pt-smartsoft-back",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        }
+    ]
+}

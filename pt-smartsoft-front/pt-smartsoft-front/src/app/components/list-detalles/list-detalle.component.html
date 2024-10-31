@@ -1,0 +1,32 @@
+<div class="container">
+    <div class="container row g-2 mb-3 mt-3" >
+        <h2 class="col-md-5" >Gestion de Detalles <i class="fa-solid fa-file-lines"></i></h2>
+        <a class="col-md-3 btn btn-primary"  routerLink="../agregarDetalle"><h5>Nuevo Detalle <i class="fa-solid fa-plus"></i></h5> </a>
+
+    </div>
+    <table class="table table-hover table-striped-rows">
+        <thead class="table-dark">
+          <tr>
+            <th scope="col" class="col-md-3">Num Detalle</th>
+            <th scope="col">ID Factura</th>
+            <th scope="col">ID Producto</th>
+            <th scope="col">Cantidad</th>
+            <th scope="col">Precio Unidad</th>
+            
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let detalle of detallesLista  | paginate: { itemsPerPage: registrosPorPagina, currentPage: paginaActual}">
+            <th scope="row">{{detalle.num_detalle}}</th>
+            <td>{{detalle.factura.num_factura}}</td>
+            <td>{{detalle.producto.id_producto}}</td>
+            <td>{{detalle.cantidad}}</td>
+            <td>{{detalle.precio}}</td>
+          </tr>
+        </tbody>
+    </table>
+    <div  class="d-flex justify-content-center mb-3">
+      <pagination-controls (pageChange)="paginaActual = $event"></pagination-controls>
+    </div>
+    
+</div>

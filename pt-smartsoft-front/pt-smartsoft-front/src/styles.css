@@ -1,0 +1,31 @@
+/* You can add global styles to this file, and also import other style files */
+body {
+   /* background: linear-gradient(to right, #a3bfc8, #dfe2e3);*/ /* Degradado azul claro */
+   background-image: url('./assets/FondoArticulos.png');
+
+}
+
+div.container.row.g-2.mb-3.mt-3 h2{
+    background-color: rgb(0, 0, 0);
+    margin-right: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    color: white;
+}
+div.row.mb-3.mt-3 > h3{
+    background-color: rgb(0, 0, 0);
+    margin-right: 10px;
+    
+    border-radius: 10px;
+    color: white;
+}
+.bg-body-tertiary {
+    background-color: rgb(49 167 195) !important;
+
+}
+.nav-link {
+    
+    font-size: 18px;
+    color: black;
+    
+}

@@ -1,0 +1,21 @@
+.span-error{
+    color: #ffffff;
+    background: #e90000b8;
+    padding: 10px;
+    border-radius: 5px;
+}
+.span-exito{
+    color: #ffffff;
+    background: #009d1ab8;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.row .col label{
+    margin-left: 10px;
+}
+
+.btn-new{
+    background: #ff8400;
+    border-color: #ff8400;
+}

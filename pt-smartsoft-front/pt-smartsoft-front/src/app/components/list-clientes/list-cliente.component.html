@@ -1,0 +1,36 @@
+<div class="container">
+    <div class="container  row g-2 mb-3 mt-3">
+        <h2 class="col-md-5">Gestion de Clientes <i class="fa-solid fa-users"></i></h2>
+        <a class="col-md-3 btn btn-primary"  routerLink="../agregarCliente"><h5>Nuevo Cliente <i class="fa-solid fa-plus"></i></h5> </a>
+    </div>
+    <table class="table table-hover table-striped-rows">
+        <thead class="table-dark">
+          <tr>
+            <th scope="col">Identificacion</th>
+            <th scope="col">Nombre</th>
+            <th scope="col">Apellido</th>
+            <th scope="col">Direccion</th>
+            <th scope="col">Fecha de nacimiento</th>
+            <th scope="col">Telefono</th>
+            <th scope="col">Email</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let cliente of clientesLista | paginate: { itemsPerPage: registrosPorPagina, currentPage: paginaActual}">
+            <th scope="row">{{cliente.id_cliente}}</th>
+            <td>{{cliente.nombre}}</td>
+            <td>{{cliente.apellido}}</td>
+            <td>{{cliente.direccion}}</td>
+            <td>{{cliente.fecha_nacimiento}}</td>
+            <td>{{cliente.telefono}}</td>
+            <td>{{cliente.email}}</td>
+          </tr>
+        </tbody>
+    </table>
+    <div  class="d-flex justify-content-center mb-3">
+      <pagination-controls (pageChange)="paginaActual = $event"></pagination-controls>
+    </div>
+    
+</div>
+
+<router-outlet></router-outlet>

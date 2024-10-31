@@ -1,0 +1,48 @@
+<div class="container" style="background: #32aac300;">
+    <nav class="navbar navbar-expand-lg bg-body-tertiary" style="border-radius: 0px 0px 10px 10px;">
+        <div class="container-fluid">
+          <a class="navbar-brand" routerLink="/inicio">JULMASCLEAN</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="nav nav-tabs">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Clientes</a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item"  routerLink="clientes" >Consultas</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item" routerLink="agregarCliente">Agregar Cliente</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Productos</a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" routerLink="productos">Consultas</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item" routerLink="agregarProducto">Agregar Producto</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Facturas</a>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" routerLink="facturas">Facturas</a></li>
+                    <li><hr class="dropdown-divider"></li>
+                    <li><a class="dropdown-item" routerLink="agregarFactura">Nueva Factura</a></li>
+                  </ul>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Detalle</a>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" routerLink="detalles">Detalles</a></li>
+                    <li><hr class="dropdown-divider"></li>
+                    <li><a class="dropdown-item" routerLink="agregarDetalle">Nuevo Detalle</a></li>
+                  </ul>
+                </li>
+              </ul>
+          </div>
+        </div>
+      </nav>
+</div>
+
+<router-outlet></router-outlet>

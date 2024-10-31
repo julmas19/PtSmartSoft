@@ -1,0 +1,30 @@
+<div class="container">
+    <div class="container row g-2 mb-3 mt-3" >
+        <h2 class="col-md-5">Gestion de Productos <i class="fa-solid fa-boxes-stacked"></i></h2>
+        <a class="col-md-3 btn btn-primary"  routerLink="../agregarProducto"><h5>Nuevo Producto <i class="fa-solid fa-plus"></i></h5> </a>
+
+    </div>
+    <table class="table table-hover table-striped-rows">
+        <thead class="table-dark">
+          <tr>
+            <th scope="col" class="col-md-3">ID</th>
+            <th scope="col">Nombre</th>
+            <th scope="col">Precio</th>
+            <th scope="col">Stock</th>
+            
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let producto of productosLista | paginate: { itemsPerPage: registrosPorPagina, currentPage: paginaActual}">
+            <th scope="row">{{producto.id_producto}}</th>
+            <td>{{producto.nombre}}</td>
+            <td>{{producto.precio}}</td>
+            <td>{{producto.stock}}</td>
+            
+          </tr>
+        </tbody>
+    </table>
+    <div  class="d-flex justify-content-center mb-3">
+      <pagination-controls (pageChange)="paginaActual = $event"></pagination-controls>
+    </div>
+</div>

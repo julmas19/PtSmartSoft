@@ -1,0 +1,23 @@
+ng serve para inizializar la app
+Crear Clase Usuario
+ng  g class NombreClase --skip-tests
+ng g c listCliente --skip-tests   //Para crear componentes
+ng g s cliente --skip-tests      // para crear servicios
+
+ng g c components/agregar-cliente --skip-tests 
+
+ng g c components/agregar-producto --skip-tests 
+
+
+ng g c components/errores --skip-tests 
+ng g c components/list-factura --skip-tests
+ng g s services/factura --skip-tests
+ng  g class models/factura --skip-tests
+
+
+ng g c components/list-detalle --skip-tests
+ng g s services/detalle --skip-tests
+ng  g class models/detalle --skip-tests
+ng g c components/agregar-detalle --skip-tests 
+
+ng g c components/inicio --skip-tests
